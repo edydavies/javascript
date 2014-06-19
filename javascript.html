@@ -106,7 +106,9 @@
 
 		// shennan: Actually the getElementById refers specifically to returning the HTML element with the specified id. So document.getElementId('ed') will return anything on the page that looks like this <div id="ed"></div>.
 
-		document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old";
+		// shennan: values in object's are case sensitive. I've corrected this (i.e changed firstname to firstName below).
+
+		document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old";
 
 		// shennan: To get the above code to work, we needed to stick an element in the document with an id of "demo". I have done this at the top of the document.
 
