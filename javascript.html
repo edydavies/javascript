@@ -1,119 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Lesson 1, fucking with varibales</title>
+	<title>Lesson 1, fucking with varibales</title>
 </head>
 <body>
 
-<script language="javascript" type="text/javascript">
-
-	// DEMANDS (these get a bit annoying after a while)	
-
-	confirm ("Hello, welcome to the page, this mainly includes fucking around with variables and other fun things I never knew Java could do - like this!!")
-
-	var name = prompt("Before we start, can you please enter your name to the site? It doesn't go anywhere yet. Just a cool arse pop up")
-
-	// shennan: the 'prompt' method returns the name that was typed into the text box, so we can punt it straight into a variable and print it to the html:
-
-	document.write("your name is: " + name + "<br/>");
-
-	// VARIABLES
-
-	document.write(Number.MAX_VALUE+"<br />"); // the max amount of characters Javascript can handle (don't 100% understand this)
-	document.write(Number.MIN_VALUE+"<br />"); // the min amount of characters Javascript can handle (don't 100% understand this - letters are shwoing)
-
-	// shennan: the MAX_VALUE and MIN_VALUE properties of the Number class are the maximum and minimum possible values JavaScript can create. Because they're so large, they're written in a strange notation. We'll address this a little further down the line.
-
-	var a = "coldplay"; // my first variable, dedicated to Coldplay
-	document.write(a + "<br />"); // document.write allows you to print a variable onto a page (I think)
-
-	// shennan: correct, the document.write method allows us to write to the page as we go. It's not particularly good practise as some older browsers choke on it. But we'll allow it for now. Later, we'll learn a much better way to write to the document.
-
-	var e = "blur".length; // using the length tools here, it spits our the number of letters used
-	document.write(e + "<br />");
-
-	var b = "bonjovi"; // my second variable
-	var c = "pixies"; // my thrid variable
-
-	var combined = b + c; // a function which combines two variables together
-	document.write(combined + "<br />"); // trying to add breaks which break up the page
-
-	// ADDING VARIABLES TOGETHER
-
-	var d = 5; // wrapping variables in quotes means your NAMING that variable
-	var e = 10; // not adding quotes means your assigning a variable a number (I think??)
-
-	var total = d + e; // I'm adding two varibales here to a new variable, no idea where this could be used in practice, but it's cool!
-
-	// shennan: writing to a new variable is good practise as you can then re-use that variable easily instead of continuing to write d + e
-
-	document.write (total + "<br />"); // This works
-
-	document.write (d + e + "<br />"); // This has the same result though. In what cases would you create other varibales or not?
-
-	// OBJECTS
-
-	var beatles = "hey I'm ringo star"
-
-	document.write (beatles + " has " + beatles.length + "characters in it.<br/>") //length here is a property
-
-	// BOOLEANS (didn't go into that much detail with booleans - kind of get it)
+	<noscript> 
+		<h3>This site requires javascript</h3> 
+	</noscript>
 	
-	// shennan: Boolean's get created automatically if they exist within an 'if' statement. So anything within the 'if' statement will get evaluated as true or false. If the result is true, then the code in the proceeding squiggly brackets will get run, otherwise the 'else' part will run.
+	<!-- here is an element with an id of "demo" -->
+	<div id="demo"></div>
 
-	var string = "I'm trying my hardest";
-	var characters = 20;
+	<script language="javascript" type="text/javascript">
 
-	if(string.length > characters){
+		// DEMANDS (these get a bit annoying after a while)	
 
-		document.write(string + "has more characters than " + characters + ".<br/>");
+		confirm ("Hello, welcome to the page, this mainly includes fucking around with variables and other fun things I never knew Java could do - like this!!")
 
-	}else{
+		var name = prompt("Before we start, can you please enter your name to the site? It doesn't go anywhere yet. Just a cool arse pop up")
 
-		document.write(string + "has less characters than " + characters + ".<br/>");
+		// shennan: the 'prompt' method returns the name that was typed into the text box, so we can punt it straight into a variable and print it to the html:
 
-	};
+		document.write("your name is: " + name + "<br/>");
 
-	// shennan: you can also create a Boolean simply by assigning the value true or false (without quotes) to a variable like so:
+		// VARIABLES
 
-	var bool = true;
+		document.write(Number.MAX_VALUE+"<br />"); // the max amount of characters Javascript can handle (don't 100% understand this)
+		document.write(Number.MIN_VALUE+"<br />"); // the min amount of characters Javascript can handle (don't 100% understand this - letters are shwoing)
 
-	if(bool){
+		// shennan: the MAX_VALUE and MIN_VALUE properties of the Number class are the maximum and minimum possible values JavaScript can create. Because they're so large, they're written in a strange notation. We'll address this a little further down the line.
 
-		document.write("bool is true.<br/>");
+		var a = "coldplay"; // my first variable, dedicated to Coldplay
+		document.write(a + "<br />"); // document.write allows you to print a variable onto a page (I think)
 
-	}else{
+		// shennan: correct, the document.write method allows us to write to the page as we go. It's not particularly good practise as some older browsers choke on it. But we'll allow it for now. Later, we'll learn a much better way to write to the document.
 
-		document.write("bool is false.<br/>");
+		var e = "blur".length; // using the length tools here, it spits our the number of letters used
+		document.write(e + "<br />");
 
-	}
+		var b = "bonjovi"; // my second variable
+		var c = "pixies"; // my thrid variable
 
-</script>
+		var combined = b + c; // a function which combines two variables together
+		document.write(combined + "<br />"); // trying to add breaks which break up the page
 
-<noscript> 
-	<h3>This site requires javascript</h3> 
-</noscript>
+		// ADDING VARIABLES TOGETHER
 
-<!-- here is an element with an id of "demo" -->
-<div id="demo"></div>
+		var d = 5; // wrapping variables in quotes means your NAMING that variable
+		var e = 10; // not adding quotes means your assigning a variable a number (I think??)
 
-<script type="text/javascript">
+		var total = d + e; // I'm adding two varibales here to a new variable, no idea where this could be used in practice, but it's cool!
 
-	// I saw a good analogy where objects can be compared with a person. Object name: Ed, properties: lanky, methods: spits when talks. 
+		// shennan: writing to a new variable is good practise as you can then re-use that variable easily instead of continuing to write d + e
 
-	var person = {
-	    firstName : "Ed", // I'm presuming that 'firstname' is an ID. That's why is capthes the data when you use the command getElementById
-	    lastName  : "Davies",
-	    age       : 28,
-	    eyeColor  : "blue"
-	};
+		document.write (total + "<br />"); // This works
 
-	// shennan: Actually the getElementById refers specifically to returning the HTML element with the specified id. So document.getElementId('ed') will return anything on the page that looks like this <div id="ed"></div>.
+		document.write (d + e + "<br />"); // This has the same result though. In what cases would you create other varibales or not?
 
-	document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old";
+		// OBJECTS
 
-	// shennan: To get the above code to work, we needed to stick an element in the document with an id of "demo". But we also need to make sure that this code runs AFTER that element has been loaded in. A quick way of doing this is to stick the code at the bottom of the document, which I have done here.
+		var beatles = "hey I'm ringo star"
 
-</script>
+		document.write (beatles + " has " + beatles.length + " characters in it.<br/>") //length here is a property
+
+		// BOOLEANS (didn't go into that much detail with booleans - kind of get it)
+		
+		// shennan: Boolean's get created automatically if they exist within an 'if' statement. So anything within the 'if' statement will get evaluated as true or false. If the result is true, then the code in the proceeding squiggly brackets will get run, otherwise the 'else' part will run.
+
+		var string = "I'm trying my hardest";
+		var characters = 20;
+
+		if(string.length > characters){
+
+			document.write(string + " has more characters than " + characters + ".<br/>");
+
+		}else{
+
+			document.write(string + " has less characters than " + characters + ".<br/>");
+
+		};
+
+		// shennan: you can also create a Boolean simply by assigning the value true or false (without quotes) to a variable like so:
+
+		var bool = true;
+
+		if(bool){
+
+			document.write("bool is true.<br/>");
+
+		}else{
+
+			document.write("bool is false.<br/>");
+
+		}
+
+		// I saw a good analogy where objects can be compared with a person. Object name: Ed, properties: lanky, methods: spits when talks. 
+
+		var person = {
+		    firstName : "Ed", // I'm presuming that 'firstname' is an ID. That's why is capthes the data when you use the command getElementById
+		    lastName  : "Davies",
+		    age       : 28,
+		    eyeColor  : "blue"
+		};
+
+		// shennan: Actually the getElementById refers specifically to returning the HTML element with the specified id. So document.getElementId('ed') will return anything on the page that looks like this <div id="ed"></div>.
+
+		document.getElementById("demo").innerHTML = person.firstname + " is " + person.age + " years old";
+
+		// shennan: To get the above code to work, we needed to stick an element in the document with an id of "demo".
+
+	</script>
 </body>
 </html>
